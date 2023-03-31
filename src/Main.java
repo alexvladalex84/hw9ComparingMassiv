@@ -5,7 +5,7 @@ public class Main {
 //        task1();
 //        task2();
 //        task3();
-        task4();
+//        task4();
 
 
     }
@@ -44,12 +44,12 @@ public class Main {
         в формате: «Минимальная сумма трат за день составила … рублей. Максимальная сумма трат за день составила … рублей».*/
         System.out.println("task2");
         int[] arr = generateRandomArray();
-        int maxSum = -1;
-        int minSum = 200;
+        int maxSum = 100_000;
+        int minSum = 200_000;
         for (int index = 0; index < arr.length; index++) {
             if (arr[index] > maxSum) {
                 maxSum = arr[index];
-            } else if (arr[index] < minSum) {
+            }   if (arr[index] < minSum) {
                 minSum = arr[index];
             }
 
@@ -74,7 +74,7 @@ public class Main {
         for (int index = 0; index < arr.length; index++) {
             totalSum += arr[index];
         }
-        mediumSum = totalSum / 2;
+        mediumSum = totalSum / arr.length;
         System.out.println(totalSum);
         System.out.println("Средняя сумма трат за месяц составила " + mediumSum + " рублей.");
 
